@@ -3,17 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   validate_map.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: leda-sil <leda-sil@student.42sp.org.br     +#+  +:+       +#+        */
+/*   By: leda-sil <leda-sil@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/26 21:12:49 by leda-sil          #+#    #+#             */
-/*   Updated: 2022/09/26 22:43:22 by leda-sil         ###   ########.fr       */
+/*   Updated: 2022/09/27 11:50:03 by leda-sil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long.h"
 
-static void	check_map_walls(t_data *sl);
 static void	check_map_shape(t_data *sl);
+static void	check_map_walls(t_data *sl);
 static void	check_map_characters(t_data *sl);
 
 void	validate_map(t_data *sl, char *map_name)
@@ -25,6 +25,7 @@ void	validate_map(t_data *sl, char *map_name)
 	check_map_shape(sl);
 	check_map_walls(sl);
 	check_map_characters(sl);
+	validate_path(sl);
 }
 
 static void	check_map_shape(t_data *sl)
@@ -81,8 +82,9 @@ static void	check_map_characters(t_data *sl)
 				sl->player_r = i;
 				sl->player_c = j;
 			}
-			else if (sl->map[i][j] != 'N' && sl->map[i][j] != 'C' && sl->map[i][j] != '1'
-				&& sl->map[i][j] != '0' && sl->map[i][j] != 'E')
+			else if (sl->map[i][j] != 'N' && sl->map[i][j] != 'C'
+				&& sl->map[i][j] != '1' && sl->map[i][j] != '0'
+				&& sl->map[i][j] != 'E')
 			{
 				free_map(sl);
 				error_msg_and_exit("There are invalid characters on map");

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   exit_messages.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: leda-sil <leda-sil@student.42sp.org.br     +#+  +:+       +#+        */
+/*   By: leda-sil <leda-sil@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/26 20:51:23 by leda-sil          #+#    #+#             */
-/*   Updated: 2022/09/26 22:41:32 by leda-sil         ###   ########.fr       */
+/*   Updated: 2022/09/28 17:40:09 by leda-sil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 void	error_msg_and_exit(char	*msg)
 {
 	ft_putstr(COLOR_RED);
-	ft_putstr(COLOR_BOLD);
 	ft_putendl("Error!");
 	ft_putstr(msg);
 	ft_putendl(COLOR_DEFAULT);
@@ -41,4 +40,22 @@ void	invalid_elements_exit(t_data *sl)
 		error_msg_and_exit("The map must containt only 1 starting point!");
 	if (sl->collectibles == 0)
 		error_msg_and_exit("There are no collectibles in the map!");
+}
+
+void	game_win(t_data *sl)
+{
+	ft_putstr(COLOR_GREEN);
+	ft_putstr("YOU WIN THE GAME!");
+	ft_putendl(COLOR_DEFAULT);
+	close_window(sl);
+	exit(0);
+}
+
+void	game_lose(t_data *sl)
+{
+	ft_putstr(COLOR_RED);
+	ft_putstr("YOU LOSE THE GAME!");
+	ft_putendl(COLOR_DEFAULT);
+	close_window(sl);
+	exit(0);
 }
