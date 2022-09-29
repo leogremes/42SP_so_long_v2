@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   so_long.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: leda-sil <leda-sil@student.42sp.org.br     +#+  +:+       +#+        */
+/*   By: leda-sil <leda-sil@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/26 16:30:01 by leda-sil          #+#    #+#             */
-/*   Updated: 2022/09/29 15:35:49 by leda-sil         ###   ########.fr       */
+/*   Updated: 2022/09/29 11:00:57 by leda-sil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@
 # define BANNER_HEIGHT 32
 # define BANNER_WIDTH 224
 
-# define ANIMATION_TICKS 20000
+# define ANIMATION_TICKS 17500
 
 # define KEY_ESC 65307
 # define KEY_W 119
