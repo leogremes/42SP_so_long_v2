@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   window_drawing.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: leda-sil <leda-sil@student.42sp.org.br     +#+  +:+       +#+        */
+/*   By: leda-sil <leda-sil@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/27 18:19:54 by leda-sil          #+#    #+#             */
-/*   Updated: 2022/09/29 15:23:10 by leda-sil         ###   ########.fr       */
+/*   Updated: 2022/09/29 18:25:28 by leda-sil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,8 @@ static void	put_image(t_data *sl, unsigned int row, unsigned int col)
 	img = point_to_image(sl, row, col);
 	if (img)
 	{
-		mlx_put_image_to_window(sl->mlx, sl->win, img, col * SPRITE_SIZE,
+		mlx_put_image_to_window(sl->mlx, sl->win, img,
+			col * SPRITE_SIZE + sl->x_offset,
 			row * SPRITE_SIZE + BANNER_HEIGHT);
 	}
 	sl->animation_tick++;

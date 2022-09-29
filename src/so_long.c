@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   so_long.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: leda-sil <leda-sil@student.42sp.org.br     +#+  +:+       +#+        */
+/*   By: leda-sil <leda-sil@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/26 16:47:31 by leda-sil          #+#    #+#             */
-/*   Updated: 2022/09/29 15:53:33 by leda-sil         ###   ########.fr       */
+/*   Updated: 2022/09/29 18:24:52 by leda-sil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,10 @@ static void	so_long(t_data *sl)
 
 	window_width = sl->cols * SPRITE_SIZE;
 	if (window_width < BANNER_WIDTH + (BANNER_HEIGHT * 3))
+	{
 		window_width = BANNER_WIDTH + (BANNER_HEIGHT * 3);
+		sl->x_offset = (window_width - (sl->cols * SPRITE_SIZE)) / 2;
+	}
 	sl->mlx = mlx_init();
 	if (sl->mlx)
 	{
@@ -57,6 +60,7 @@ static void	set_to_zero(t_data *sl)
 {
 	sl->rows = 0;
 	sl->cols = 0;
+	sl->x_offset = 0;
 	sl->starts = 0;
 	sl->exits = 0;
 	sl->collectibles = 0;

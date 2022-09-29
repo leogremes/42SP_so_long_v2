@@ -6,7 +6,7 @@
 /*   By: leda-sil <leda-sil@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/26 16:30:01 by leda-sil          #+#    #+#             */
-/*   Updated: 2022/09/29 11:00:57 by leda-sil         ###   ########.fr       */
+/*   Updated: 2022/09/29 18:23:17 by leda-sil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,6 +83,7 @@ typedef struct s_data
 	char			**map;
 	unsigned int	rows;
 	unsigned int	cols;
+	unsigned int	x_offset;
 	unsigned int	starts;
 	unsigned int	exits;
 	unsigned int	collectibles;

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   free_memory.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: leda-sil <leda-sil@student.42sp.org.br     +#+  +:+       +#+        */
+/*   By: leda-sil <leda-sil@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/26 22:23:25 by leda-sil          #+#    #+#             */
-/*   Updated: 2022/09/29 15:31:55 by leda-sil         ###   ########.fr       */
+/*   Updated: 2022/09/29 18:31:26 by leda-sil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,7 @@ void	close_window(t_data *sl)
 	mlx_destroy_window(sl->mlx, sl->win);
 	sl->win = NULL;
 	mlx_destroy_display(sl->mlx);
+	free(sl->mlx);
 }
 
 static void	free_static_images(t_data *sl)

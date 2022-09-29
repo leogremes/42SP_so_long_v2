@@ -33,8 +33,17 @@ all: $(NAME)
 
 bonus: $(NAME)
 
-$(NAME): $(OBJ) $(MLX) msg
-	$(CC) $(CFLAGS) $(OBJ) $(MLX) $(MLXFLAGS) -o $@
+$(NAME): $(OBJ) $(MLX)
+	$(CC) $(CFLAGS) $(OBJ) $(MLX) $(MLXFLAGS) -o $@ -g3
+	@echo "\n\n\
+:*^*:._.:*^*:._.:*^*:._.:*^*:._.:*^*:._.:*^*:._.:*^*:._.:*^*:\n\
+:                                                           :\n\
+:                 \033[1;33mYOUR GAME IS READY TO PLAY\033[m                :\n\
+:                                                           :\n\
+:   \033[1;32m-> \033[35mType \033[37;40m \"./so_long <map_name>.ber\" \033[m\033[1;35m to play\033[m            :\n\
+:   \033[1;32m-> \033[35mType \033[37;40m \"ls -1 maps/*ber\" \033[m\033[1;35m to see the available maps\033[m   :\n\
+:                                                           :\n\
+:._.:*^*:._.:*^*:._.:*^*:._.:*^*:._.:*^*:._.:*^*:._.:*^*:._.:\n\n"
 
 $(MLX):
 	make -C $(MLX_DIR)
@@ -52,15 +61,4 @@ fclean: clean
 
 re: fclean all
 
-msg:
-	@echo "\n\n\
-:*^*:._.:*^*:._.:*^*:._.:*^*:._.:*^*:._.:*^*:._.:*^*:._.:*^*:\n\
-:                                                           :\n\
-:           YOUR GAME IS READY TO PLAY                      :\n\
-:                                                           :\n\
-:      Type \"./so_long <map_name>.ber\" to play              :\n\
-:  Type \"ls -1 maps/*ber\" to see the available maps         :\n\
-:                                                           :\n\
-:._.:*^*:._.:*^*:._.:*^*:._.:*^*:._.:*^*:._.:*^*:._.:*^*:._.:\n\n"
-
-.PHONY: all bonus clean fclean re msg
+.PHONY: all bonus clean fclean re
