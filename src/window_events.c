@@ -3,19 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   window_events.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: leda-sil <leda-sil@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: leda-sil <leda-sil@student.42sp.org.br     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/28 16:50:17 by leda-sil          #+#    #+#             */
-/*   Updated: 2022/09/28 17:41:11 by leda-sil         ###   ########.fr       */
+/*   Updated: 2022/09/29 15:24:25 by leda-sil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long.h"
 
 static void	check_player_movement(unsigned int row_dst, unsigned int col_dst,
-	t_data *sl);
-static void move_player(unsigned int row_dst, unsigned int col_dst,
-	t_data *sl);
+				t_data *sl);
+static void	move_player(unsigned int row_dst, unsigned int col_dst,
+				t_data *sl);
 
 int	closed_by_user(t_data *sl)
 {
@@ -75,7 +75,7 @@ static void	check_player_movement(unsigned int row_dst, unsigned int col_dst,
 		game_lose(sl);
 }
 
-static void move_player(unsigned int row_dst, unsigned int col_dst,
+static void	move_player(unsigned int row_dst, unsigned int col_dst,
 	t_data *sl)
 {
 	sl->map[row_dst][col_dst] = 'P';

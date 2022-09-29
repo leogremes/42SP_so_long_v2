@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   free_memory.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: leda-sil <leda-sil@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: leda-sil <leda-sil@student.42sp.org.br     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/26 22:23:25 by leda-sil          #+#    #+#             */
-/*   Updated: 2022/09/28 17:32:56 by leda-sil         ###   ########.fr       */
+/*   Updated: 2022/09/29 15:31:55 by leda-sil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ static void	free_animated_node(t_animation *node, t_data *sl);
 void	free_map(t_data *sl)
 {
 	size_t	i;
-	
+
 	if (sl->map)
 	{
 		i = -1;
@@ -34,13 +34,14 @@ void	close_window(t_data *sl)
 
 	free_static_images(sl);
 	sl->current = NULL;
-	while(sl->head)
+	while (sl->head)
 	{
 		tmp = sl->head->next;
 		free_animated_node(sl->head, sl);
 		free(sl->head);
 		sl->head = tmp;
 	}
+	free_map(sl);
 	mlx_destroy_window(sl->mlx, sl->win);
 	sl->win = NULL;
 	mlx_destroy_display(sl->mlx);

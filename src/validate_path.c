@@ -3,19 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   validate_path.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: leda-sil <leda-sil@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: leda-sil <leda-sil@student.42sp.org.br     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/27 11:08:08 by leda-sil          #+#    #+#             */
-/*   Updated: 2022/09/27 17:37:03 by leda-sil         ###   ########.fr       */
+/*   Updated: 2022/09/29 15:24:38 by leda-sil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long.h"
 
 static int	check_tile(t_data *sl, t_dfs *dfs, unsigned int row,
-	unsigned int col);
+				unsigned int col);
 static int	check_path(t_data *sl, t_dfs *dfs, unsigned int row,
-	unsigned int col);
+				unsigned int col);
 static void	fix_map(t_data *sl);
 
 void	validate_path(t_data *sl)
@@ -57,7 +57,7 @@ static int	check_tile(t_data *sl, t_dfs *dfs, unsigned int row,
 static int	check_path(t_data *sl, t_dfs *dfs, unsigned int row,
 	unsigned int col)
 {
-	int tile;
+	int	tile;
 	int	done;
 
 	tile = check_tile(sl, dfs, row, col);

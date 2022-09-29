@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   validate_map.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: leda-sil <leda-sil@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: leda-sil <leda-sil@student.42sp.org.br     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/26 21:12:49 by leda-sil          #+#    #+#             */
-/*   Updated: 2022/09/27 11:50:03 by leda-sil         ###   ########.fr       */
+/*   Updated: 2022/09/29 15:21:26 by leda-sil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ static void	check_map_characters(t_data *sl);
 void	validate_map(t_data *sl, char *map_name)
 {
 	int	fd;
-	
+
 	fd = file_check(map_name);
 	read_elements(sl, fd);
 	check_map_shape(sl);

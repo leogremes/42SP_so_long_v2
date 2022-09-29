@@ -1,25 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   window_functions.c                                 :+:      :+:    :+:   */
+/*   window_drawing.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: leda-sil <leda-sil@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: leda-sil <leda-sil@student.42sp.org.br     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/27 18:19:54 by leda-sil          #+#    #+#             */
-/*   Updated: 2022/09/28 16:43:22 by leda-sil         ###   ########.fr       */
+/*   Updated: 2022/09/29 15:23:10 by leda-sil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long.h"
 
-static void put_image(t_data *sl, unsigned int row, unsigned int col);
+static void	put_image(t_data *sl, unsigned int row, unsigned int col);
 static void	change_animation_sprite(t_data *sl);
 static void	draw_banner(t_data *sl);
 
 int	screen_updater(t_data *sl)
 {
 	unsigned int	row;
-	unsigned int 	col;
+	unsigned int	col;
 
 	if (sl->win)
 	{
@@ -31,13 +31,12 @@ int	screen_updater(t_data *sl)
 			col = -1;
 			while (++col < sl->cols)
 				put_image(sl, row, col);
-
 		}
 	}
 	return (0);
 }
 
-static void put_image(t_data *sl, unsigned int row, unsigned int col)
+static void	put_image(t_data *sl, unsigned int row, unsigned int col)
 {
 	void	*img;
 
@@ -83,7 +82,7 @@ static void	draw_banner(t_data *sl)
 			img = point_to_number_image(sl, moves % 10);
 		if (img)
 		{
-			mlx_put_image_to_window(sl->mlx, sl->win, img, 
+			mlx_put_image_to_window(sl->mlx, sl->win, img,
 				BANNER_WIDTH + ((len - i) * BANNER_HEIGHT), 0);
 			moves /= 10;
 		}

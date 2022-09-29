@@ -6,7 +6,7 @@
 /*   By: leda-sil <leda-sil@student.42sp.org.br     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/26 22:26:07 by leda-sil          #+#    #+#             */
-/*   Updated: 2022/09/26 22:29:06 by leda-sil         ###   ########.fr       */
+/*   Updated: 2022/09/29 15:20:46 by leda-sil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ int	file_check(char *map_name)
 {
 	char	*file_path;
 	int		fd;
-	
+
 	if (ft_strstr(map_name, ".ber\0") == NULL)
 		error_msg_and_exit("Map must be a .ber file!");
 	file_path = ft_strjoin("./maps/", map_name);
