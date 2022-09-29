@@ -6,7 +6,7 @@
 /*   By: leda-sil <leda-sil@student.42sp.org.br     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/26 16:47:31 by leda-sil          #+#    #+#             */
-/*   Updated: 2022/09/29 15:32:38 by leda-sil         ###   ########.fr       */
+/*   Updated: 2022/09/29 15:53:33 by leda-sil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,8 @@ static void	so_long(t_data *sl)
 		}
 	}
 	else
-		ft_putendl("No pointer");
+		error_msg_and_exit("You need run this game in somewhere with graphical \
+support.");
 }
 
 static void	set_to_zero(t_data *sl)

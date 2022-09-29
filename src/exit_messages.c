@@ -6,7 +6,7 @@
 /*   By: leda-sil <leda-sil@student.42sp.org.br     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/26 20:51:23 by leda-sil          #+#    #+#             */
-/*   Updated: 2022/09/29 15:47:46 by leda-sil         ###   ########.fr       */
+/*   Updated: 2022/09/29 15:54:19 by leda-sil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,13 +58,13 @@ void	game_lose(t_data *sl)
 {
 	ft_putstr(COLOR_RED);
 	ft_putendl("Yb  dP  dP\"Yb  88   88     88      dP\"Yb  .dP\"Y8 888888\
-	     d8b");
+    d8b");
 	ft_putendl(" YbdP  dP   Yb 88   88     88     dP   Yb `Ybo.\" 88__    \
-	   Y8P");
+   Y8P");
 	ft_putendl("  8P   Yb   dP Y8   8P     88  .o Yb   dP o.`Y8b 88""     \
-	  `\"'");
+  `\"'");
 	ft_putstr(" dP     YbodP  `YbodP'     88ood8  YbodP  8bodP' 888888    \
-	 (8)");
+ (8)");
 	ft_putendl(COLOR_DEFAULT);
 	close_window(sl);
 	exit(0);
