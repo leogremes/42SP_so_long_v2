@@ -41,7 +41,7 @@ $(NAME): $(OBJ) $(MLX)
 :                 \033[1;33mYOUR GAME IS READY TO PLAY\033[m                :\n\
 :                                                           :\n\
 :   \033[1;32m-> \033[35mType \033[37;40m \"./so_long <map_name>.ber\" \033[m\033[1;35m to play\033[m            :\n\
-:   \033[1;32m-> \033[35mType \033[37;40m \"ls -1 maps/*ber\" \033[m\033[1;35m to see the available maps\033[m   :\n\
+:   \033[1;32m-> \033[35mType \033[37;40m \"make maps\" \033[m\033[1;35m to see the available maps\033[m         :\n\
 :                                                           :\n\
 :._.:*^*:._.:*^*:._.:*^*:._.:*^*:._.:*^*:._.:*^*:._.:*^*:._.:\n\n"
 
@@ -61,4 +61,9 @@ fclean: clean
 
 re: fclean all
 
-.PHONY: all bonus clean fclean re
+maps:
+	@echo "\n\033[1;32mList of Available Maps:\033[m"
+	@find maps/ -name "*.ber" -exec basename {} \;
+	@echo "\n"
+
+.PHONY: all bonus clean fclean re maps
