@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   so_long.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: leda-sil <leda-sil@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: leda-sil <leda-sil@student.42sp.org.br     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/26 16:47:31 by leda-sil          #+#    #+#             */
-/*   Updated: 2022/09/29 18:24:52 by leda-sil         ###   ########.fr       */
+/*   Updated: 2022/09/30 22:36:43 by leda-sil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,8 @@ int	main(int argc, char **argv)
 	set_to_zero(&sl);
 	validate_map(&sl, argv[1]);
 	so_long(&sl);
+	free_map(&sl);
+	error_msg_and_exit("Can't open the window");
 	return (0);
 }
 
@@ -51,9 +53,6 @@ static void	so_long(t_data *sl)
 			mlx_loop(sl->mlx);
 		}
 	}
-	else
-		error_msg_and_exit("You need run this game in somewhere with graphical \
-support.");
 }
 
 static void	set_to_zero(t_data *sl)
