@@ -78,9 +78,11 @@ considerávelmente maior que os já feitos até aqui.
 Ver o resultado do projeto, por mais simples que seja, é muito satisfatório e traz a sensação de que
 valeu a pena.
 
-### Confira outros projetos desenvolvidos por mim na formação da 42 São Paulo
-1. [LIBFT](https://github.com/leogremes/42SP_libft)
-2. [GET_NEXT_LINE](https://github.com/leogremes/42SP_gnl)
-3. [FT_PRINTF](https://github.com/leogremes/42SP_ft_printf)
-4. BORN2BEROOT (Projeto não consiste em códigos)
-5. SO_LONG [[V1]](https://github.com/leogremes/42SP_so_long_v1) <b>[V2]</b>
+<br>
+
+#### Confira outros projetos desenvolvidos por mim na formação da 42 São Paulo</b>
+<small>1. [LIBFT](https://github.com/leogremes/42SP_libft)<br>
+2. [GET_NEXT_LINE](https://github.com/leogremes/42SP_gnl)<br>
+3. [FT_PRINTF](https://github.com/leogremes/42SP_ft_printf)<br>
+4. BORN2BEROOT (Projeto não consiste em códigos)<br>
+5. SO_LONG [[V1]](https://github.com/leogremes/42SP_so_long_v1) <b>[V2]</b></small>
